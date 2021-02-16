@@ -39,7 +39,7 @@ client.on('message', message => {
         if(message.content.startsWith(':')){
             const command = message.content
             if(command.includes(':help')){
-                message.channel.send(msgHelp)
+
             }else if(command.includes(':momos')){
                 if(command === ':momos-help'){
                     fs.readdir('./img',function(err,files){
@@ -71,39 +71,15 @@ client.on('message', message => {
                 })
             }else if(command.includes(':vergazos')){
                 if(command === ':vergazos-help'){
-                    const msg = `
-                        HOLA HIJO/HIJA DE TU PUTA MADRE
 
-                        PARA INSULTA A ALGUIEN DEBES HACERLO ASI:
-
-                        :vergazos-@usuario-INSULTOOOO
-
-                        EJEMPLO
-
-                        :vergazos-@tumadre-PUTA
-                    
-                    `
                 }else{
-                    const arrayMensaje = command.split('-')
-                    message.channel.send(`${arrayMensaje[2]} ${arrayMensaje[1]} Eso te manda a decir @${message.author.username}`)
+
                 }
             }else{
-                message.channel.send(msgHelp)
+
             }
         }else{
-            if(knowSimp(message.author.username,message.content)){
-                message.reply('MALEJA NO TE AMA PUTO CALLATE',{files:['./img/simp.png']})
-            }else{
-                if(Array.isArray(knowGrosero(message.content,message.author.username))){
-                    const random = numeroAleatorio(0,2)
-                    message.reply(malejaInsultos[random])
-                }else if(knowGrosero(message.content,message.author.username)){
-                    const random = numeroAleatorio(0,4)
-                    message.reply(insultos[random])
-                }else{
 
-                }
-            }
         }
     }
 })
