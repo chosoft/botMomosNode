@@ -185,4 +185,4 @@ function knowGrosero(message,user){
         }
     }
 }
-client.login('NzY1NDEyODU2MDA2NDQzMDA4.X4UcRQ.9LsFFTLaNcL14u2DcuSFJOVHVzc')
+client.login(process.env.TOKEN)
